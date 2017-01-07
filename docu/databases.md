@@ -4,6 +4,7 @@
 
 
 ##emergency_cases
+~~~~
 | id                      | int(10) unsigned |
 | boat_status             | varchar(255)     |
 | boat_condition          | varchar(255)     |
@@ -19,8 +20,10 @@
 | user_id                 | int(11)          |
 | created_at              | timestamp        |
 | updated_at              | timestamp        |
+~~~~
 
 ##emergency_case_locations
+~~~~
 | id                | int(10) unsigned |
 | emergency_case_id | int(11)          |
 | lat               | double(10,7)     |
@@ -29,8 +32,10 @@
 | created_at        | timestamp        |
 | updated_at        | timestamp        |
 | connection_type   | varchar(60)      |
+~~~~
 
 ##operation_areas
+~~~~
 | id                  | int(10) unsigned |
 | title               | varchar(255)     |
 | polygon_coordinates | text             |
@@ -38,8 +43,10 @@
 | active              | int(11)          |
 | created_at          | timestamp        |
 | updated_at          | timestamp        | 
+~~~~
 
 ##messages
+~~~~
 | id           | int(10) unsigned |
 | message_type | varchar(255)     |
 | author_id    | int(11)          |
@@ -48,8 +55,10 @@
 | received_by  | text             |
 | created_at   | timestamp        |
 | updated_at   | timestamp        |
+~~~~
 
 ##vehicles
+~~~~
 | id                   | int(10) unsigned |
 | user_id              | int(11)          | (linked user)
 | title                | varchar(255)     |
@@ -64,8 +73,10 @@
 | sog                  | double(8,2)      | (spead over ground)
 | created_at           | timestamp        |
 | updated_at           | timestamp        |
+~~~~
 
 ##vehicle_locations
+~~~~
 | id              | int(10) unsigned |
 | vehicle_id      | int(11)          |
 | lat             | double(10,7)     |
@@ -73,4 +84,4 @@
 | connection_type | varchar(255)     |
 | created_at      | timestamp        |
 | updated_at      | timestamp        |
-
+~~~~
