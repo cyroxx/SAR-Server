@@ -18,6 +18,7 @@
 | additional_informations | text             |
 | operation_area          | int(11)          |
 | user_id                 | int(11)          |
+| archived                | tinyint(1)       |
 | created_at              | timestamp        |
 | updated_at              | timestamp        |
 ~~~~
@@ -70,7 +71,7 @@
 | location_alarm_enabled   | tinyint(1)       | (if true location alarm for 12/24nm zone activated)
 | location_alarm_recipients| varchar(255)     | (mails for location alarm comma separated)
 | logo_url                 | varchar(255)     | (logo is scraped if logo_url is changed)
-| spead_over_ground        | double(8,2)      | (speed over ground)
+| speed_over_ground        | double(8,2)      | (speed over ground)
 | created_at               | timestamp        |
 | updated_at               | timestamp        |
 
