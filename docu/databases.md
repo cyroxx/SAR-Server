@@ -59,20 +59,21 @@
 
 ##vehicles
 ~~~~
-| id                   | int(10) unsigned |
-| user_id              | int(11)          | (linked user)
-| title                | varchar(255)     |
-| type                 | varchar(255)     |
-| sat_number           | varchar(255)     | (sat phone numer)
-| public               | int(1)           |
-| key                  | varchar(255)     |
-| marker_color         | varchar(6)       |
-| location_alarm       | tinyint(1)       | (if true location alarm for 12/24nm zone activated)
-| location_alarm_mails | varchar(255)     | (mails for location alarm comma separated)
-| logo_url             | varchar(255)     | (logo is scraped if logo_url is changed)
-| sog                  | double(8,2)      | (spead over ground)
-| created_at           | timestamp        |
-| updated_at           | timestamp        |
+| id                       | int(10) unsigned |
+| user_id                  | int(11)          | (linked user)
+| title                    | varchar(255)     |
+| tracking_type            | varchar(255)     |
+| sat_number               | varchar(255)     | (sat phone numer)
+| public                   | int(1)           |
+| api_key                  | varchar(255)     |
+| marker_color             | varchar(6)       |
+| location_alarm_enabled   | tinyint(1)       | (if true location alarm for 12/24nm zone activated)
+| location_alarm_recipients| varchar(255)     | (mails for location alarm comma separated)
+| logo_url                 | varchar(255)     | (logo is scraped if logo_url is changed)
+| spead_over_ground        | double(8,2)      | (speed over ground)
+| created_at               | timestamp        |
+| updated_at               | timestamp        |
+
 ~~~~
 
 ##vehicle_locations
