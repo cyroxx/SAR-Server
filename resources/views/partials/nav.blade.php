@@ -16,9 +16,6 @@
                 <li class="{{ (Request::is('/') ? 'active' : '') }}">
                     <a href="{{ url('') }}"><i class="fa fa-home"></i> Home</a>
                 </li>
-                <li class="{{ (Request::is('articles') ? 'active' : '') }}">
-                    <a href="{{ url('articles') }}">Articles</a>
-                </li>
                 <li class="{{ (Request::is('about') ? 'active' : '') }}">
                     <a href="{{ url('about') }}">About</a>
                 </li>
