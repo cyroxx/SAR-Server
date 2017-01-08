@@ -9,9 +9,9 @@
 | boat_status             | varchar(255)     |
 | boat_condition          | varchar(255)     |
 | boat_type               | varchar(255)     |
-| other_involved          | varchar(255)     |
-| engine_working          | varchar(255)     |
-| passenger_count         | int(11)          |
+| other_involved          | tinyint(1)       |
+| engine_working          | tinyint(1)       |
+| passenger_count         | varchar(255)     |
 | women_on_board          | varchar(255)     |
 | children_on_board       | varchar(255)     |
 | disabled_on_board       | varchar(255)     |
@@ -30,9 +30,9 @@
 | lat               | double(10,7)     |
 | lon               | double(10,7)     |
 | accuracy          | int(11)          |
+| connection_type   | varchar(255)     |
 | created_at        | timestamp        |
 | updated_at        | timestamp        |
-| connection_type   | varchar(60)      |
 ~~~~
 
 ##operation_areas
@@ -41,7 +41,7 @@
 | title               | varchar(255)     |
 | polygon_coordinates | text             |
 | user_id             | int(11)          |
-| active              | int(11)          |
+| active              | tinyint(1)       |
 | created_at          | timestamp        |
 | updated_at          | timestamp        | 
 ~~~~
