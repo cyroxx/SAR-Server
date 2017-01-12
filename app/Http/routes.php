@@ -31,5 +31,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 });
 
 Route::group(['prefix' => 'api/v1'], function() {
-    Route::resource('cases', 'EmergencyCaseController');
+    Route::get('cases/{id}', 'EmergencyCaseController@show');
 });
