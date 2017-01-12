@@ -7,3 +7,4 @@ composer.lock
 /.vagrant/
 storage/debugbar
 .DS_store
+.idea
