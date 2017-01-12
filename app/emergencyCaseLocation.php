@@ -1,19 +1,14 @@
 <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use DB;
-class emergencyCaseLocation extends Model
+
+class EmergencyCaseLocation extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+	protected $visible = ['lat', 'lon', 'accuracy', 'connection_type', 'created_at'];
+
     public function emergency_case()
     {
-        return $this->belongsTo('App\emergencyCase')->withTimestamps();
+        return $this->belongsTo('App\EmergencyCase')->withTimestamps();
     }
 }
