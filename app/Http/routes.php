@@ -29,3 +29,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('user/{user}/delete', 'Admin\UserController@delete');
     Route::resource('user', 'Admin\UserController');
 });
+
+Route::group(['prefix' => 'api/v1'], function() {
+    Route::resource('cases', 'EmergencyCaseController');
+});
