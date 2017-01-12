@@ -3,39 +3,36 @@ How to install
 
 ### Step 1: Get the Source Code:
 
-You can download https://github.com/sea-watch/SAR-Server/archive/master.zip and unzip it in your www or htdocs folder.
+Clone `https://github.com/sea-watch/SAR-Server.git` or download `https://github.com/sea-watch/SAR-Server/archive/master.zip` into your webserver root directory (e.g. `htdocs`). 
 
+### Step 2: Install dependencies
 
-Or just clone this Repo
-### Step 2: Use Composer to install dependencies
+Laravel utilizes [Composer](http://getcomposer.org/) to manage its dependencies. Please follow [these instructions](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) to install Composer.
 
-Laravel utilizes [Composer](http://getcomposer.org/) to manage its dependencies. First, download a copy of the composer.phar.
-Once you have the PHAR archive, you can either keep it in your local project directory or move to
-usr/local/bin to use it globally on your system.
-On Windows, you can use the Composer [Windows installer](https://getcomposer.org/Composer-Setup.exe).
-
-Enter the admin/ directory and run:
+After installing Composer, you can install the dependencies like so:
 
     composer dump-autoload
     composer install --no-scripts
 
-
 ### Step 3: Create a Database on your Server with uft8_general_ci
-
 ### Step 4: Update the .env file to your local settings
 
 ### Step 5: Generate Application Key
 
 Laravel needs an application key. In order to generate it, switch to the admin directory and type:
 
-php artisan key:generate
+    php artisan key:generate
 
-### Step 5: DB Migration
+### Step 6: Migrating the database
 
-Go to the admin directory and type
+In the project's root directory, the following two commands will (1) run all database migrations and (2) populate the database with example data.
 
     php artisan migrate
     php artisan db:seed
+
+If you had already populated the database before and want to recreate the database from scratch, you can run
+
+    php artisan migrate:refresh
 
 ### Step 6: Change URLS
 
