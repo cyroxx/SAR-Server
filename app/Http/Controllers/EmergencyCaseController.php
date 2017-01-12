@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\EmergencyCase;
 use Illuminate\Http\Request;
 
 class EmergencyCaseController extends Controller
@@ -13,6 +14,7 @@ class EmergencyCaseController extends Controller
      */
     public function show($id)
     {
-        return \App\EmergencyCase::with('locations')->findOrFail($id);
+        return response()
+            ->json(EmergencyCase::with('locations')->findOrFail($id));
     }
 }
