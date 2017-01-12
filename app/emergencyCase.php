@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\EmergencyCaseLocation;
 
-class EmergencyCase extends Model
-{
+class EmergencyCase extends Model {
+
     protected $fillable = [
         'additional_informations',
         'archived',
@@ -26,12 +26,8 @@ class EmergencyCase extends Model
     ];
 
     protected $dates = ['created_at', 'updated_at'];
-    protected $appends = ['locations'];
 
-    public function getLocationsAttribute()
-    {
-        return EmergencyCaseLocation::where('emergency_case_id', $this->id)
-            ->orderBy('created_at', 'desc')
-            ->get();
+    public function locations() {
+        return $this->hasMany('App\EmergencyCaseLocation');
     }
 }

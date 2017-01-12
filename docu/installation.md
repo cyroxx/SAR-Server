@@ -44,6 +44,7 @@ In
 
 
 ### Apache Config
+
 You need to enable AllowOverride for your DocumentRoot. If you don't do that, then .htaccess has no effect on mod_rewrite.
 
 

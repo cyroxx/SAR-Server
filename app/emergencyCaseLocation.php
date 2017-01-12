@@ -7,8 +7,8 @@ class EmergencyCaseLocation extends Model
 {
 	protected $visible = ['lat', 'lon', 'accuracy', 'connection_type', 'created_at'];
 
-    public function emergency_case()
+    public function emergencyCase()
     {
-        return $this->belongsTo('App\EmergencyCase')->withTimestamps();
+        return $this->belongsTo('App\EmergencyCase');
     }
 }

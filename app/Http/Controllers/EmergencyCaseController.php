@@ -44,7 +44,7 @@ class EmergencyCaseController extends Controller
      */
     public function show($id)
     {
-        return \App\EmergencyCase::findOrFail($id);
+        return \App\EmergencyCase::with('locations')->findOrFail($id);
     }
 
     /**

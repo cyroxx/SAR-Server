@@ -8,3 +8,6 @@ composer.lock
 storage/debugbar
 .DS_store
 .idea
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
