@@ -15,13 +15,11 @@ class EmergencyCase extends Model {
         'boat_status',
         'boat_type',
         'children_on_board',
-        'created_at',
         'disabled_on_board',
         'engine_working',
         'operation_area',
         'other_involved',
         'passenger_count',
-        'updated_at',
         'women_on_board',
     ];
 
