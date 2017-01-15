@@ -31,7 +31,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 });
 
 Route::group(['prefix' => 'api/v1'], function() {
-    Route::get('cases/{id}', 'EmergencyCaseController@show');
+    // Some API requests do not need to be authenticated, but if in doubt put your routes in here.
+    Route::group(['api/v1', 'middleware' => 'api_auth'], function() {
+        Route::get('cases/{id}', 'EmergencyCaseController@show');
+    });
 
     Route::post('authenticate', 'Auth\AuthController@apiAuthenticate');
 });
