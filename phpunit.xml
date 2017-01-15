@@ -21,9 +21,12 @@
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="JWT_SECRET" value="dmIei2DlSmQN5OvcChi5mz3AMsTXEqef" />
         <env name="DB_DATABASE" value="sar-server-testing"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <ini name="display_errors" value="On" />
+        <ini name="display_startup_errors" value="On" />
     </php>
 </phpunit>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+use JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -61,5 +64,20 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function apiAuthenticate(Request $request) {
+        $credentials = $request->only(['email', 'password']);
+
+        try {
+            if (! $token = JWTAuth::attempt($credentials)) {
+                return response()->json(['error' => 'INVALID_CREDENTIALS'], 401);
+            }
+        } catch (JWTException $e) {
+            // TODO: log this error
+            return response()->json(['error' => 'TOKEN_CREATION_FAILED'], 500);
+        }
+
+        return response()->json(['token' => $token]);
     }
 }
