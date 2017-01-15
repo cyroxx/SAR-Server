@@ -32,4 +32,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 
 Route::group(['prefix' => 'api/v1'], function() {
     Route::get('cases/{id}', 'EmergencyCaseController@show');
+
+    Route::post('authenticate', 'Auth\AuthController@apiAuthenticate');
 });
