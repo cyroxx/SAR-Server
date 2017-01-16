@@ -1,0 +1,30 @@
+language: php
+php:
+  - '7.0'
+  - '7.1'
+
+services:
+  - mysql
+
+env:
+  global:
+    - DB_HOST=localhost
+    - DB_DATABASE=sar-server-testing
+    - DB_USERNAME=root
+    - APP_KEY=eeXDiPebf90HuqJyD7ViO6cGnZjVx5KK
+    - JWT_SECRET=dmIei2DlSmQN5OvcChi5mz3AMsTXEqef
+    - APP_ENV=testing
+    - APP_DEBUG=true
+
+before_install:
+  - mysql -e 'CREATE DATABASE `sar-server-testing`;'
+
+install:
+  - composer install --no-scripts
+
+cache:
+  directories:
+  - vendor/
+
+script:
+  - vendor/bin/phpunit
