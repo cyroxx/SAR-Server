@@ -32,8 +32,7 @@ Requirements
 Installation
 ----------------
 
-The installation guide can be found here [see here](./docu/dev_informations.md).
-
+The installation guide can be found here [see here](./docu/installation.md).
 
 
 Contributing
