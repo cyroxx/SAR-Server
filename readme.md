@@ -1,4 +1,4 @@
-SEA WATCH APP
+SEA WATCH APP [![Build Status](https://travis-ci.org/sea-watch/SAR-Server.svg?branch=master)](https://travis-ci.org/sea-watch/SAR-Server)
 ===================
 
 About this Project
